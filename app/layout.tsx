@@ -13,15 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase:new URL("http://localhost:3000/") ,
+  alternates: {
+    canonical: "/",},
   title: {
-    default: "Lumora - Smart Shopping,Powered by AI",
+    default: "Lumora - Smart Shopping, Powered by AI",
     template: "%s | Lumora"
   },
   description:"Shop electronics, fashion and home essentials with an AI assistant that helps you find the right product.",
   openGraph: {
    type: "website",
   title: "Lumora - Smart Shopping, Powered by AI",
-  description: "Shop electronics, fashion and home essentials...",
+  description: "Shop electronics, fashion and home essentials with an AI assistant that helps you find the right product.",
   },
 };
 
