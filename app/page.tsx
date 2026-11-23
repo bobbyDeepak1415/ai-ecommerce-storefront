@@ -1,5 +1,8 @@
+
 function Home() {
-console.log("home rendered")
+console.log("home rendered",typeof window)
+
+
   return (
     <main>
       <h1>Ai-Store Front</h1>
