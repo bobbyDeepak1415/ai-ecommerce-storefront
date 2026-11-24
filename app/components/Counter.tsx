@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+"use client"
+import { useState } from 'react'
 
 const Counter = () => {
 
     const [count,setCount]=useState(0)
-  return (
-    <div>
-        <button onClick={()=>setCount(prev=>prev+1)}>Clicked (count) times</button>
+  
+    
+      return  <button onClick={()=>setCount(prev=>prev+1)}>Clicked {count} times</button>
       
-    </div>
-  )
+
+  
 }
 
 export default Counter
