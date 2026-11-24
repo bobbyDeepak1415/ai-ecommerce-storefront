@@ -1,6 +1,6 @@
 
 function Home() {
-console.log("home rendered",typeof window)
+// console.log("home rendered",typeof window)
 
 
   return (
@@ -12,3 +12,5 @@ console.log("home rendered",typeof window)
 }
 
 export default Home
+
+

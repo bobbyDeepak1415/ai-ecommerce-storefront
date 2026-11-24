@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase:new URL("http://localhost:3000/") ,
   alternates: {
-    canonical: "/",},
+    canonical: "/",
+  },
   title: {
     default: "Lumora - Smart Shopping, Powered by AI",
     template: "%s | Lumora"
