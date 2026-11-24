@@ -6,7 +6,7 @@ const Counter = () => {
     const [count,setCount]=useState(0)
   
     
-      return  <button onClick={()=>setCount(prev=>prev+1)}>Clicked {count} times</button>
+      return  <button onClick={()=>setCount(prev=>prev+1)}>Clicked {count} times {typeof window === "undefined" ? "server" : "browser"}</button>
       
 
   
