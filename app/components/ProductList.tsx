@@ -1,5 +1,4 @@
 
-'use client'
 
 import { useState } from "react"
 
@@ -9,21 +8,22 @@ type Product={
 
 const ProductList=async()=>{
 
-    const [products,setProducts]=useState([])
 
     const res=await fetch("https://dummyjson.com/products?limit=5")
-    const response=await res.json()
+    const data=await res.json()
 
+    const products:Product[]=data.products
     
 
-    setProducts(response.products)
 
 return (
     <ul>
         {products.map((product)=>{
-            return <li key={product.id}><{product.title}  <span>{product.price}</span> </li>
+            return <li key={product.id}>{product.title}  <span>{product.price}</span> </li>
         })}
     </ul>
 )
 
 }
+
+export default ProductList
