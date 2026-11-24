@@ -9,8 +9,7 @@ const ProductList=async()=>{
 
     "use cache"
 
-    cacheLife("minutes");
-    console.log("FETCHING PRODUCTS", new Date().toLocaleTimeString());
+    cacheLife({stale:5,revalidate:10,expire:60});
 
 await new Promise((resolve)=>setTimeout(resolve,3000))
     const res=await fetch("https://dummyjson.com/products?limit=5")
@@ -22,11 +21,14 @@ await new Promise((resolve)=>setTimeout(resolve,3000))
 
 
 return (
+    <>
+    <p>Generated at {new Date().toLocaleTimeString()}</p>
     <ul>
         {products.map((product)=>{
             return <li key={product.id}>{product.title}  <span>{product.price}</span> </li>
         })}
     </ul>
+        </>
 )
 
 }
