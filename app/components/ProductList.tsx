@@ -1,5 +1,5 @@
 
-
+import { cacheLife } from 'next/cache'
 
 type Product={
     id:number,title:string,price:number
@@ -7,9 +7,13 @@ type Product={
 
 const ProductList=async()=>{
 
+    "use cache"
+
+    cacheLife("minutes");
+
 await new Promise((resolve)=>setTimeout(resolve,3000))
     const res=await fetch("https://dummyjson.com/products?limit=5")
-    if(!res.ok) throw new Error(`$failed to fetch: ${res.status}`)
+    if(!res.ok) throw new Error(`Failed to fetch: ${res.status}`)
     const data=await res.json()
 
     const products:Product[]=data.products
