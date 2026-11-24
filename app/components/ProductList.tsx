@@ -7,7 +7,7 @@ type Product={
 
 const ProductList=async()=>{
 
-
+await new Promise((resolve)=>setTimeout(resolve,3000))
     const res=await fetch("https://dummyjson.com/products?limit=5")
     if(!res.ok) throw new Error(`$failed to fetch: ${res.status}`)
     const data=await res.json()
