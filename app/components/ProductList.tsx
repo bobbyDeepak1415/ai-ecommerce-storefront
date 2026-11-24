@@ -10,6 +10,7 @@ const ProductList=async()=>{
     "use cache"
 
     cacheLife("minutes");
+    console.log("FETCHING PRODUCTS", new Date().toLocaleTimeString());
 
 await new Promise((resolve)=>setTimeout(resolve,3000))
     const res=await fetch("https://dummyjson.com/products?limit=5")
