@@ -5,4 +5,5 @@
 
 2. in next.connfig.ts there is cacheComponents:true. it prebuilds each page into a static shell, the fast part it can serve instantly
 
-3. 'use cache' and cacheLife() tell the nextJs server to cache the rendered output of this function.not the function itself but the rendered output
+3. 'use cache' and cacheLife() tell the nextJs server to cache the rendered output of this function.not the function itself but the rendered output.
+'use cache' marks the the component as a server-cached component.
